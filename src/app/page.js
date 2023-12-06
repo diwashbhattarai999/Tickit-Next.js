@@ -1,11 +1,13 @@
-import Nav from "@/components/header/Nav";
+import Nav from "@/components/Nav";
+import Cards from "@/components/Cards";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Nav />
-    </div>
+      <Cards />
+    </>
   );
-}
+};
 
 export default Home;
