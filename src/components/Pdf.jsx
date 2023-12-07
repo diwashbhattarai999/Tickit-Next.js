@@ -208,12 +208,7 @@ const PDF = ({ data }) => {
   );
 };
 const PDFView = () => {
-  const [client, setClient] = useState(false);
   const userDetails = useSelector((state) => state.user);
-
-  useEffect(() => {
-    setClient(true);
-  }, []);
 
   return (
     <PDFViewer style={{ width: "100vw", height: "100vh" }}>

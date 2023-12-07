@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movie Ticket Booking System
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a Movie Ticket Booking System developed using React.js and Next.js. It allows users to select movies, choose the quantity of tickets, provide billing information, and generates a bill in PDF format.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Movie Selection Interface:**
+    - Display a list of available movies with details (title, description, price, etc.).
+    - Allow users to select the quantity of tickets for each movie.
+    - Users can select only one movie at a time.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. **Price Calculation:**
+    - Calculate the total price based on the selected quantity of tickets, including tax and discount.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Billing Information Form:**
+    - Create a form for users to enter billing information (fullname, email, address, etc.).
+    - Implement form validation for proper input.
 
-## Learn More
+4. **Generation of Bill:**
+    - Generate a bill in PDF format containing movie details, quantity, total price, and billing information.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Integration and UI Design:**
+    - Integrate components for seamless functionality.
+    - Design a user-friendly interface for a pleasing user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- React.js
+- Next.js
+- [TMDB API](https://www.themoviedb.org/documentation/api) for movie details
+- [React PDF](https://react-pdf-viewer.dev/) for generating PDF
 
-## Deploy on Vercel
+## How to Run Locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    git clone https://github.com/your-username/movie-ticket-booking.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    cd movie-ticket-booking
+    npm install
+    ```
+
+3. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+4. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
+
+## Live Demo
+
+The application is deployed on [Vercel](https://vercel.com/) at [Live Demo URL](your-live-demo-url).
+
+## Challenges and Solutions
+
+- The main challenge was to generate the pdf file using next.js. I researched about various libraries and implemented 2 to 3 library and was not able to generate the pdf. But finally i found react-pdf which helped me a lot in generating the pdf but the styling part was still hard since i had to use the internal css.
+
+## Author
+
+- Diwash Bhattarai
+- 9863447740, diwashb999@gmail.com
+

@@ -2,7 +2,7 @@
 
 import { GoDotFill } from "react-icons/go";
 import Button from "./Button";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "@/store/slices/userSlice";
 import { useRouter } from "next/navigation";
@@ -39,6 +39,7 @@ const CheckoutSummary = ({ title, totalPrice, tickets, imgPath }) => {
   }, [dispatch, taxAmount, tickets, total, title, imgUrl]);
   const handleSubmit = () => {
     router.push(`/pdfView`);
+    // return <PDFView />
   };
   //   console.log(userDetails);
 
