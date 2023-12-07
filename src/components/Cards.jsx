@@ -10,10 +10,10 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { getApiConfiguration } from "@/store/slices/homeSlice";
+import Loader from "./Loader";
 
 const Card = () => {
   const { data, loading } = useFetch("/movie/popular");
-  const router = useRouter();
   const url = useSelector((state) => state.home.url); // selecting URL from Redux store
   const dispatch = useDispatch();
 
@@ -29,6 +29,10 @@ const Card = () => {
     };
     fetchApiConfig(); // fetching API configuration when component mounts
   }, [dispatch]);
+
+  if (loading) {
+    return <Loader loading={loading} />;
+  }
 
   return (
     <div className="bg-transparent">

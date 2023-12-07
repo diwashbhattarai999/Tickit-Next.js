@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import EventDetails from "./EventDetails";
+import Loader from "./Loader";
 
 const CardInfo = ({ id }) => {
   const { data, loading } = useFetch(`/movie/${id}`);
@@ -17,6 +18,9 @@ const CardInfo = ({ id }) => {
       ? `${baseUrl}${moviePosterPath}`
       : "/assets/fallback.png";
 
+  if (loading) {
+    return <Loader loading={loading} />;
+  }
 
   return (
     <div className="mx-6 px-10 py-10 flex flex-col lg:flex-row gap-4 text-text-primary">
@@ -70,7 +74,7 @@ const CardInfo = ({ id }) => {
         </div>
       </div>
       <div className="py-3 px-8 bg-bg-secondary rounded-md lg:w-1/3">
-        <EventDetails data={data}/>
+        <EventDetails data={data} />
       </div>
     </div>
   );

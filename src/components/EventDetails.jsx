@@ -74,7 +74,7 @@ const EventDetails = ({ data }) => {
 
       {/* Checkout button */}
       <Button
-        buttonText={`Checkout for ${500 * ticketCounter}`}
+        buttonText={`Checkout for $${500 * ticketCounter}`}
         onclick={() =>
           router.push(
             `/checkout?title=${data?.title}&&tickets=${ticketCounter}&&price=${

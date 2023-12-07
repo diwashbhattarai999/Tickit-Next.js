@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
   tableColumn: {
     marginVertical: 20,
     display: "flex",
-    justifyContent: "space-between",
     flexDirection: "row",
+    gap: 34,
   },
   total: {
     fontSize: 24,
@@ -84,7 +84,12 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 4,
   },
-  cutouts: {},
+  movieTitle: {
+    width: "100px", // Set a fixed width or use max-width
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+  },
 });
 
 // Create Document Component
@@ -146,11 +151,11 @@ const PDF = ({ data }) => {
             </View>
             <View style={styles.tableColumn}>
               <Text>1</Text>
-              <Text>{data?.title}</Text>
-              <Text>movie</Text>
-              <Text>{data?.tickets}</Text>
-              <Text>{data?.normalPrice}</Text>
-              <Text>{data?.discountAmount}</Text>
+              <Text style={styles.movieTitle}>{data?.title}</Text>
+              <Text style={{ marginRight: 30 }}>movie</Text>
+              <Text style={{ marginRight: 38 }}>{data?.tickets}</Text>
+              <Text style={{ marginRight: 48 }}>{data?.normalPrice}</Text>
+              <Text style={{ marginRight: 24 }}>{data?.discountAmount}</Text>
               <Text>{data?.total}</Text>
             </View>
             <Text
