@@ -14,12 +14,13 @@ const Nav = () => {
           <div className="flex items-center gap-20">
             {/* Logo */}
             <Link href="/">
-              <Image
+              {/* <Image
                 src="/assets/Logo.png"
                 alt="logo"
                 width={199}
                 height={36}
-              />
+              /> */}
+              <h1 className="text-red-primary font-bold text-3xl">TICKIT</h1>
             </Link>
 
             {/* Links */}
