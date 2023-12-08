@@ -13,13 +13,13 @@ const Nav = () => {
           {/* Logo + Links */}
           <div className="flex items-center gap-20">
             {/* Logo */}
-            <Link href="/">
-              {/* <Image
+            <Link href="/" className="flex gap-2 items-center">
+              <Image
                 src="/assets/Logo.png"
                 alt="logo"
-                width={199}
+                width={36}
                 height={36}
-              /> */}
+              />
               <h1 className="text-red-primary font-bold text-3xl">TICKIT</h1>
             </Link>
 
@@ -37,10 +37,10 @@ const Nav = () => {
 
           {/* Login/Register */}
           <div className="flex items-center gap-8">
-            <div className="px-2 py-3 rounded-md cursor-pointer hover:bg-red-primary">
+            <div className="px-2 py-3 rounded-md cursor-pointer hover:bg-purple-600 transition-all duration-300">
               Login
             </div>
-            <div className="bg-red-primary px-2 py-3 rounded-md cursor-pointer hover:bg-red-500">
+            <div className="bg-red-primary px-2 py-3 rounded-md cursor-pointer hover:bg-purple-600 transition-all duration-300">
               Register
             </div>
           </div>

@@ -25,14 +25,16 @@ const styles = StyleSheet.create({
     color: "#97ABC0",
   },
   nav: {
-    backgroundColor: "#E14658",
-    height: "48px",
+    backgroundColor: "#7c2ac9",
+    height: "52px",
     width: "100%",
     display: "flex",
-    justifyContent: "center",
+    alignItems: "center",
+    gap: "8px",
+    flexDirection: "row",
   },
   logo: {
-    width: "120px",
+    width: "36px",
     paddingLeft: 10,
   },
   invoice: {
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   ticket: {
-    border: "1pt solid #97ABC0",
+    border: "1pt solid #a365dd",
     padding: 10,
     marginVertical: 10,
     display: "flex",
@@ -111,6 +113,11 @@ const PDF = ({ data }) => {
         {/* Navbar Section */}
         <View style={styles.nav}>
           <Image src="/assets/Logo.png" alt="Logo" style={styles.logo} />
+          <Text
+            style={{ fontSize: "26px", fontWeight: "extrabold", color: "#e6e2eb" }}
+          >
+            TICKIT
+          </Text>
         </View>
 
         {/* Body */}
