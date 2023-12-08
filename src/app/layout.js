@@ -8,7 +8,7 @@ export const metadata = {
   title: "Ticket Booking System",
   description: "You can book the ticket in a instant.",
   icons: {
-    icon: "vector.png",
+    icon: "/public/assets/Logo.png",
   },
 };
 
