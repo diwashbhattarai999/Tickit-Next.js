@@ -62,7 +62,7 @@ This project is a Movie Ticket Booking System developed using React.js and Next.
 
 ## Live Demo
 
-The application is deployed on [Vercel](https://vercel.com/) at [Live Demo URL](https://ticket-booking-system-lancemeup.vercel.app/).
+The application is deployed on [Vercel](https://vercel.com/) at [https://ticket-booking-system-lancemeup.vercel.app/](https://ticket-booking-system-lancemeup.vercel.app/).
 
 ## Challenges and Solutions
 
