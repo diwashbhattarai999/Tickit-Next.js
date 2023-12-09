@@ -1,12 +1,11 @@
 "use client";
 
 import { GoDotFill } from "react-icons/go";
-import Button from "./Button";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "@/store/slices/userSlice";
 import { useRouter } from "next/navigation";
-import PDFView from "./Pdf";
+import PDFView from "../Pdf";
 
 const CheckoutSummary = ({ title, totalPrice, tickets, imgPath }) => {
   const userDetails = useSelector((state) => state.user);
@@ -39,10 +38,7 @@ const CheckoutSummary = ({ title, totalPrice, tickets, imgPath }) => {
   }, [dispatch, taxAmount, tickets, total, title, imgUrl]);
   const handleSubmit = () => {
     router.push(`/pdfView`);
-    // return <PDFView />
   };
-  //   console.log(userDetails);
-
   return (
     <div className="text-text-primary">
       <h2 className="text-xl my-4 font-bold">Checkout Summary</h2>
@@ -97,8 +93,7 @@ const CheckoutSummary = ({ title, totalPrice, tickets, imgPath }) => {
         </p>
       </div>
 
-      {/* Confirm Button */}
-      <Button buttonText="Confirm & Pay" onclick={handleSubmit} />
+      
     </div>
   );
 };

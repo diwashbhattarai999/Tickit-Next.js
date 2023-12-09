@@ -35,8 +35,9 @@ const Input = ({
               : "border-neutral-300 focus:border-black mb-5"
           }
         `}
+       
       />
-      {errors && touched && <p className="mb-5 text-red-500">{error}</p>}
+      {errors && touched && <p className="mb-5 text-red-500">{errors}</p>}
     </div>
   );
 };

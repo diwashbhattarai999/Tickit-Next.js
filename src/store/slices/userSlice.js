@@ -15,6 +15,7 @@ const initialState = {
   tickets: 0,
   title: "",
   imgUrl: "",
+  error: "",
 };
 
 const userSlice = createSlice({

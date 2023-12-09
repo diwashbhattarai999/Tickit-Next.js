@@ -1,18 +1,20 @@
 import * as Yup from "yup";
 
 export const formValidation = Yup.object({
-  name: Yup.string()
-    .required("Enter your fullname.")
-    .min(2, "First name must be between 2 and 16 characters.")
-    .max(16, "First name must be between 2 and 16 characters.")
-    .matches(/^[aA-aZ]/, "Numbers and special characters are not allowed."),
+  fullName: Yup.string()
+    .required("Please enter your fullname.")
+    .min(2, "Full name must be between 2 and 32 characters.")
+    .max(32, "Full name must be between 2 and 32 characters.")
+    .matches(/^[a-z ,.'-]+$/i, "Only letters and spaces are allowed.")
+    .trim(),
 
   email: Yup.string()
-    .required("Please Enter your email address!!")
-    .email("Please enter a valid address."),
+    .required("Please enter your email address.")
+    .email("Please enter a valid email address."),
 
-  country: Yup.string().required("Please enter your country!!"),
+  address: Yup.string().required("Please enter your address"),
+  country: Yup.string().required("Please enter your country."),
   state: Yup.string(),
   city: Yup.string(),
-  zipCode: Yup.string().required("Please enter your zip code!!"),
+  zipCode: Yup.string().required("Please enter your zip code."),
 });

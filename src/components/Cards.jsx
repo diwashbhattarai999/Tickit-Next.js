@@ -46,7 +46,7 @@ const Card = () => {
                 {/* Image */}
                 <Image
                   src={`${url?.movieImg}${movie?.poster_path}`}
-                  alt={movie.title}
+                  alt={movie?.title}
                   width={150}
                   height={150}
                   className="w-full h-[380px] rounded-t-md"
